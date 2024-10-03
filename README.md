@@ -90,7 +90,7 @@ You need to have installed Node.js on your computer
 ### Installation
 
 1. Clone the repo:
-   ```sh
+```sh
    git clone https://github.com/Sirius2051/bankLandingPage.git
    ```
 2. Install dependencies:
