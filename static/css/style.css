@@ -6,6 +6,35 @@
     border: none;
     overflow-x: hidden;
 }
+*::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+  }
+  *::-webkit-scrollbar-track {
+    border-radius: 0px;
+    background-color: #E89F3A;
+  }
+  
+  *::-webkit-scrollbar-track:hover {
+    background-color: #E89F3A;
+  }
+  
+  *::-webkit-scrollbar-track:active {
+    background-color: #E89F3A;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #C53051;
+  }
+  
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: #C53051;
+  }
+  
+  *::-webkit-scrollbar-thumb:active {
+    background-color: #C53051;
+  }
 html.lenis {
     height: auto;
 }
@@ -301,7 +330,7 @@ body {
     --bs-bg-opacity: 0.1;
 }
 .app-text-header {
-    font-size: 40pt;
+    font-size: 25pt;
     width: 60%;
 }
 .app-img-1 {

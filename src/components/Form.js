@@ -66,7 +66,7 @@ export default function Form() {
                 </linearGradient>
                 </defs>
                 <path fill="url(#sw-gradient)" d="M28.1,-32.6C36.1,-26.6,42.3,-17.6,42.8,-8.5C43.3,0.6,38,9.7,32.7,18.7C27.3,27.7,21.9,36.4,13.9,40.1C6,43.8,-4.5,42.4,-13.9,38.7C-23.3,35,-31.8,29.1,-35.9,21.1C-40.1,13.1,-39.9,3.1,-38.3,-6.8C-36.6,-16.7,-33.4,-26.3,-26.8,-32.5C-20.1,-38.7,-10.1,-41.3,0,-41.3C10,-41.3,20,-38.5,28.1,-32.6Z" width="100%" height="100%" transform="translate(50 50)" stroke-width="0" style={{transition: "all 0.3s ease 0s" }} stroke="url(#sw-gradient)"></path>              </svg>
-                <div className="col-11 col-sm-11 col-md-6 col-lg-6 col-xl-6 ml-auto mr-auto d-flex align-items-center" style={{ zIndex: '1', height: '100%' }}>
+                <div className="col-11 col-sm-11 col-md-6 col-lg-6 col-xl-6 ml-auto mr-auto d-flex align-items-center" style={{ zIndex: '1', height: '100%', overflow: 'hidden' }}>
                       
                     <p className="app-text screen-1" style={{ paddingTop: '200px', width: '100%'}}>
                       Regístrate hoy en Banco Futuro <br />y comienza a disfrutar de todas nuestras ventajas. <br /><br />Nuestro proceso es rápido y sencillo.

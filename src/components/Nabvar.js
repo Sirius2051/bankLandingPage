@@ -27,15 +27,15 @@ export default function Nabvar() {
         );
     }, []);
     return (
-        <nav className="navbar navbar-expand bg-light app-navbar" ref={ref}>
+        <nav className="navbar navbar-expand bg-light app-navbar p-0" ref={ref}>
             <div className="container-fluid">
                 <a className="navbar-brand" href="#">
-                <img src={ logo } className="app-logo ml-5" alt="Banco Futuro" height="80px" />
+                <img src={ logo } className="app-logo ml-5" alt="Banco Futuro" height="60px" />
                 </a>
                 <div className="collapse navbar-collapse" id="navbarNavDropdown" style={{ justifyContent: "flex-end" }}>
                     <ul className="navbar-nav pr-5">
                         <li className="nav-item nav-btn p-3" style={{ marginRight: "3rem"}}>
-                            <a className="nav-link btn app-btn app-btn-navbar app-link-to-form btn-lg text-uppercase" aria-current="page" href="#form-container">Quiero unirme</a>
+                            <a className="nav-link btn app-btn app-btn-navbar app-link-to-form text-uppercase py-2" aria-current="page" href="#form-container">Quiero unirme</a>
                         </li>
                     </ul>
                 </div>
