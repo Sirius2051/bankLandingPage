@@ -1,39 +1,48 @@
-import React, { Component } from "react";
+import React, { useRef, useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ScrollToPlugin from "gsap/ScrollToPlugin";
 
-import { Link } from "react-router-dom";
+import logo from "../../static/img/logo.png";
 
-
-import logo from "../../static/img/jelpha_logo_3.png";
-
-
-class Nabvar extends Component {
-  render() {
+export default function Nabvar() {
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+    const ref = useRef(null);
+    useEffect(() => {
+        const element = ref.current;
+        gsap.fromTo(
+            element,
+            {
+                borderRadius: 0,
+            },
+            {
+                borderRadius: '0 0 40px 40px',
+                scrollTrigger: {
+                    trigger: element,
+                    start: "+=50%",
+                    end: "+=100%",
+                    scrub: true,
+                },
+            },
+        );
+    }, []);
     return (
-        <nav className="navbar navbar-expand bg-light app-navbar">
+        <nav className="navbar navbar-expand bg-light app-navbar" ref={ref}>
             <div className="container-fluid">
                 <a className="navbar-brand" href="#">
-                <img src={ logo } className="app-logo" alt="Jelpha" height="60px" />
+                <img src={ logo } className="app-logo ml-5" alt="Banco Futuro" height="80px" />
                 </a>
                 <div className="collapse navbar-collapse" id="navbarNavDropdown" style={{ justifyContent: "flex-end" }}>
                     <ul className="navbar-nav pr-5">
-                        <li className="nav-item nav-btn" style={{ marginRight: "3rem"}}>
-                            <a className="nav-link btn app-btn app-btn-navbar app-link-to-form" aria-current="page" href="#form-container">Quiero sumarme</a>
+                        <li className="nav-item nav-btn p-3" style={{ marginRight: "3rem"}}>
+                            <a className="nav-link btn app-btn app-btn-navbar app-link-to-form btn-lg text-uppercase" aria-current="page" href="#form-container">Quiero unirme</a>
                         </li>
-
-                        {/* <li className="nav-item" style={{ marginLeft: "3rem", marginRight: "3rem"}}>
-                            <a className="nav-link btn btn-outline-light text-white" aria-current="page" href="#">Quiero realizar prestamos</a>
-                        </li> */}
-                        
-                        
                     </ul>
                 </div>
             
             </div>
 
-            {/* <Link to="/">Solicitar un prestamo</Link> */}
-            {/* <Link to="/investor">Prestar dinero</Link> */}
         </nav>
     );
-  }
+
 }
-export default Nabvar;
